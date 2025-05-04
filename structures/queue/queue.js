@@ -1,5 +1,4 @@
-// ArrayQueue.js
-class ArrayQueue {
+class Queue {
   constructor() {
     this.queue = [];
   }
@@ -25,8 +24,8 @@ class ArrayQueue {
   }
 
   print() {
-    console.log('[' + this.queue.join(" <- ") + ']');
+    console.log("[" + this.queue.join(" <- ") + "]");
   }
 }
 
-module.exports = ArrayQueue;
+module.exports = Queue;

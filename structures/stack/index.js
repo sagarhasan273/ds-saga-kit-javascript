@@ -3,10 +3,10 @@ const LinkedListStack = require("./linked_list_stack");
 
 /**
  * Creates a stack instance based on type.
- * @param {'array' | 'linkedlist'} type
+ * @param {'stack' | 'linkedlist'} type
  * @returns {Stack | LinkedListStack}
  */
-function StackFactory(type = "array") {
+function StackFactory(type = "stack") {
   if (type === "linkedlist") {
     return new LinkedListStack();
   }

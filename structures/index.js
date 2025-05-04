@@ -1,6 +1,6 @@
 const { ...linkedList } = require("./linked-list");
 const { ...stack } = require("./stack");
-// const { ...queue } = require("./queue");
+const { ...queue } = require("./queue");
 // const { ...deque } = require("./deque");
 // const { ...hashTable } = require("./hash-table");
 // const { ...binarySearch } = require("./binary-search");
@@ -10,7 +10,7 @@ const { ...stack } = require("./stack");
 module.exports = {
   ...stack,
   ...linkedList,
-//   ...queue,
+  ...queue,
 //   ...deque,
 //   ...hashTable,
 //   ...binarySearch,
