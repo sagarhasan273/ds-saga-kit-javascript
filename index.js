@@ -1,1 +1,5 @@
-console.log('hello npm')
+const { ...structure } = require('./structures');
+
+module.exports = {
+    ...structure,
+};
