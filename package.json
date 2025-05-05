@@ -1,6 +1,6 @@
 {
   "name": "ds-saga-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Data Structure and Algorithms kit is a comprehensive JavaScript library that provides implementations of essential data structures (like stacks, queues, trees, graphs, heaps) and classic algorithms (sorting, searching, graph traversal, dynamic programming to support learning, interviews, and application development.",
   "main": "index.js",
   "scripts": {
