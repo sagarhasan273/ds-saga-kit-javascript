@@ -2,10 +2,11 @@ class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
+    this.prev = null;
   }
 }
 
-class SinglyLinkedList {
+class DoublyLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -18,6 +19,7 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = this.tail = newNode;
     } else {
+      newNode.prev = this.tail;
       this.tail.next = newNode;
       this.tail = newNode;
     }
@@ -26,26 +28,19 @@ class SinglyLinkedList {
 
   // Remove from end
   pop() {
-    if (!this.head) return null;
+    if (!this.tail) return null;
+    const removed = this.tail;
 
-    let current = this.head;
-    let previous = null;
-
-    while (current.next) {
-      previous = current;
-      current = current.next;
-    }
-
-    if (previous) {
-      previous.next = null;
-      this.tail = previous;
-    } else {
-      // Only one node
+    if (this.length === 1) {
       this.head = this.tail = null;
+    } else {
+      this.tail = removed.prev;
+      this.tail.next = null;
+      removed.prev = null;
     }
 
     this.length--;
-    return current.value;
+    return removed.value;
   }
 
   // Add to beginning
@@ -55,6 +50,7 @@ class SinglyLinkedList {
       this.head = this.tail = newNode;
     } else {
       newNode.next = this.head;
+      this.head.prev = newNode;
       this.head = newNode;
     }
     this.length++;
@@ -64,8 +60,15 @@ class SinglyLinkedList {
   shift() {
     if (!this.head) return null;
     const removed = this.head;
-    this.head = this.head.next;
-    if (!this.head) this.tail = null;
+
+    if (this.length === 1) {
+      this.head = this.tail = null;
+    } else {
+      this.head = removed.next;
+      this.head.prev = null;
+      removed.next = null;
+    }
+
     this.length--;
     return removed.value;
   }
@@ -73,34 +76,50 @@ class SinglyLinkedList {
   // Get value by index
   get(index) {
     if (index < 0 || index >= this.length) return null;
-    let current = this.head;
-    for (let i = 0; i < index; i++) {
-      current = current.next;
+
+    let current;
+    if (index < this.length / 2) {
+      current = this.head;
+      for (let i = 0; i < index; i++) current = current.next;
+    } else {
+      current = this.tail;
+      for (let i = this.length - 1; i > index; i--) current = current.prev;
     }
+
     return current.value;
   }
 
   // Set value by index
   set(index, value) {
     if (index < 0 || index >= this.length) return false;
+
     let current = this.head;
-    for (let i = 0; i < index; i++) {
-      current = current.next;
-    }
+    for (let i = 0; i < index; i++) current = current.next;
+
     current.value = value;
     return true;
   }
 
   // Print list
-  print() {
-    const values = [];
+  printForward() {
     let current = this.head;
+    const values = [];
     while (current) {
       values.push(current.value);
       current = current.next;
     }
-    console.log(values.join(" -> "));
+    console.log(values.join(" <-> "));
+  }
+
+  printBackward() {
+    let current = this.tail;
+    const values = [];
+    while (current) {
+      values.push(current.value);
+      current = current.prev;
+    }
+    console.log(values.join(" <-> "));
   }
 }
 
-module.exports = SinglyLinkedList;
+module.exports = { DoublyLinkedList };

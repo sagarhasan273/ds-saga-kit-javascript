@@ -52,8 +52,38 @@ class LinkedListQueue {
       result.push(current.value);
       current = current.next;
     }
-    console.log('[' + result.join(" <- ") + ']');
+    console.log("[" + result.join(" <- ") + "]");
   }
 }
 
-module.exports = LinkedListQueue;
+class Queue {
+  constructor() {
+    this.queue = [];
+  }
+
+  enqueue(value) {
+    this.queue.push(value); // Add to end
+  }
+
+  dequeue() {
+    return this.queue.shift(); // Remove from front
+  }
+
+  peek() {
+    return this.queue.length ? this.queue[0] : null;
+  }
+
+  isEmpty() {
+    return this.queue.length === 0;
+  }
+
+  size() {
+    return this.queue.length;
+  }
+
+  print() {
+    console.log("[" + this.queue.join(" <- ") + "]");
+  }
+}
+
+module.exports = { Queue, LinkedListQueue };
