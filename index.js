@@ -6,7 +6,6 @@ const { ...deque } = require("./structures/deque");
 const { ...hashTable } = require("./structures/hash_table");
 const { ...binarySearchTree } = require("./structures/binary_search_tree");
 const { ...heap } = require("./structures/heap");
-// const { ...graph } = require("./structures/graph");
 
 module.exports = {
   ...singlyLinkedList,
@@ -17,5 +16,4 @@ module.exports = {
   ...hashTable,
   ...binarySearchTree,
   ...heap,
-  //   ...graph,
 };
