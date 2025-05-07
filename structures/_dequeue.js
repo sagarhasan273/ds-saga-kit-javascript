@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class _CreateD {
+class _CreateDeQ {
   constructor() {
     this.front = null;
     this.rear = null;
@@ -96,4 +96,4 @@ class _CreateD {
   }
 }
 
-module.exports = { _CreateD };
+module.exports = { _CreateDeQ };
