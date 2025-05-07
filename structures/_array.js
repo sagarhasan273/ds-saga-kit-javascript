@@ -3,9 +3,19 @@
  */
 
 class _CreateAL {
-  constructor() {
+  constructor(initialValues) {
     this.length = 0;
     this.data = {};
+    
+    // Handle initial values if provided
+    if (Array.isArray(initialValues)) {
+      for (let i = 0; i < initialValues.length; i++) {
+        this.push(initialValues[i]);
+      }
+    } else if (initialValues !== undefined) {
+      // Handle single non-array value
+      this.push(initialValues);
+    }
   }
 
   // Get element at index
