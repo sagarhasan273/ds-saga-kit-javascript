@@ -7,7 +7,7 @@ A lightweight and modular JavaScript/Node.js library that provides reusable **da
 ## ✨ Features
 
 - 🧱 Classic Data Structures  
-  `Stack`, `Queue`, `Deque`, `LinkedList`, `HashTable`, `Binary Search Tree`, `Heap` (Min/Max)
+  `Array`, `Sorted Array`, `Stack`, `Queue`, `Deque`, `LinkedList`, `HashTable`, `Binary Search Tree`, `Heap` (Min/Max)
 
 - 📘 Algorithms  
   `Binary Search`, `Linear Search`, `Lower Bound`, `Upper Bound`, and more...
