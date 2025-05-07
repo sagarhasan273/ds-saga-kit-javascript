@@ -1,6 +1,6 @@
 {
   "name": "ds-saga-kit",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Data Structures Kit is a modern JavaScript library offering efficient implementations of core data structures and algorithms—ideal for learning, interviews, and real-world applications.",
   "main": "index.js",
   "scripts": {
