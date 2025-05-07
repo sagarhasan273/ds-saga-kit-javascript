@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class Deque {
+class _CreateD {
   constructor() {
     this.front = null;
     this.rear = null;
@@ -92,8 +92,8 @@ class Deque {
       result.push(current.value);
       current = current.next;
     }
-    console.log('[' + result.join(' <-> ') + ']');
+    console.log("[" + result.join(" <-> ") + "]");
   }
 }
 
-module.exports = Deque;
+module.exports = { _CreateD };

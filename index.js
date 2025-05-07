@@ -1,19 +1,22 @@
-const { ...singlyLinkedList } = require("./structures/singly_linked_list");
-const { ...doublyLinkedList } = require("./structures/doubly_linked_list");
-const { ...stack } = require("./structures/stack");
-const { ...queue } = require("./structures/queue");
-const { ...deque } = require("./structures/deque");
-const { ...hashTable } = require("./structures/hash_table");
-const { ...binarySearchTree } = require("./structures/binary_search_tree");
-const { ...heap } = require("./structures/heap");
+const singlyLinkedList = require("./structures/_singlyLinkedList");
+const doublyLinkedList = require("./structures/_doublyLinkedList");
+const stack = require("./structures/_stack");
+const queue = require("./structures/_queue");
+const deque = require("./structures/_deque");
+const hashMap = require("./structures/_hashMap");
+const binarySearchTree = require("./structures/_binarySearchTree");
+const heap = require("./structures/_heap");
 
 module.exports = {
-  ...singlyLinkedList,
-  ...doublyLinkedList,
-  ...stack,
-  ...queue,
-  ...deque,
-  ...hashTable,
-  ...binarySearchTree,
-  ...heap,
+  SinglyLinkedList: singlyLinkedList._CreateSLL,
+  DoublyLinkedList: doublyLinkedList._CreateDLL,
+  Stack: stack._CreateS,
+  ArrayStack: stack._CreateAS,
+  Queue: queue._CreateQ,
+  ArrayQueue: queue._CreateAQ,
+  Deque: deque._CreateD,
+  HashMap: hashMap._CreateHM,
+  BinarySearchTree: binarySearchTree._CreateBST,
+  MinHeap: heap._CreateMnH,
+  MaxHeap: heap._CreateMxH,
 };

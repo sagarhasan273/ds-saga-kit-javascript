@@ -1,4 +1,4 @@
-class HashTable {
+class _CreateHM {
   constructor(size = 53) {
     this.buckets = new Array(size);
     this.size = size;
@@ -93,4 +93,4 @@ class HashTable {
   }
 }
 
-module.exports = HashTable;
+module.exports = { _CreateHM };

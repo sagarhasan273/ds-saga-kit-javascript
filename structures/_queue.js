@@ -6,7 +6,7 @@ class Node {
   }
 }
 
-class LinkedListQueue {
+class _CreateQ {
   constructor() {
     this.front = null;
     this.rear = null;
@@ -56,7 +56,7 @@ class LinkedListQueue {
   }
 }
 
-class Queue {
+class _CreateAQ {
   constructor() {
     this.queue = [];
   }
@@ -86,4 +86,4 @@ class Queue {
   }
 }
 
-module.exports = { Queue, LinkedListQueue };
+module.exports = { _CreateAQ, _CreateQ };

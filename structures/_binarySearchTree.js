@@ -6,7 +6,7 @@ class TreeNode {
   }
 }
 
-class BinarySearchTree {
+class _CreateBST {
   constructor() {
     this.root = null;
   }
@@ -99,4 +99,4 @@ class BinarySearchTree {
   }
 }
 
-module.exports = BinarySearchTree;
+module.exports = { _CreateBST };

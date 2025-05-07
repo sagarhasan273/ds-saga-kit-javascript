@@ -5,7 +5,7 @@ class Node {
   }
 }
 
-class LinkedListStack {
+class _CreateS {
   constructor() {
     this.top = null;
     this.length = 0;
@@ -49,7 +49,7 @@ class LinkedListStack {
   }
 }
 
-class Stack {
+class _CreateAS {
   constructor(list = []) {
     if (!Array.isArray(list)) {
       throw new Error("Stack constructor only accepts an array.");
@@ -84,4 +84,4 @@ class Stack {
   }
 }
 
-module.exports = { Stack, LinkedListStack };
+module.exports = { _CreateAS, _CreateS };

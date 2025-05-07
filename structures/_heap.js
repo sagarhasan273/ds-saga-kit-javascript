@@ -1,4 +1,4 @@
-class MinHeap {
+class _CreateMnH {
   constructor() {
     this.heap = [];
   }
@@ -81,7 +81,8 @@ class MinHeap {
     console.log(this.heap);
   }
 }
-class MaxHeap {
+
+class _CreateMxH {
   constructor() {
     this.heap = [];
   }
@@ -165,4 +166,4 @@ class MaxHeap {
   }
 }
 
-module.exports = { MinHeap, MaxHeap };
+module.exports = { _CreateMnH, _CreateMxH };
